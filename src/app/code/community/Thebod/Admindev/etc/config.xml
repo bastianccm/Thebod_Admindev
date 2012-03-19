@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <thebod_admindev>
+                <class>Thebod_Admindev_Model</class>
+            </thebod_admindev>
+        </models>
+
+        <helpers>
+            <thebod_admindev>
+                <class>Thebod_Admindev_Helper</class>
+            </thebod_admindev>
+        </helpers>
+    </global>
+
+    <adminhtml>
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <thebod_admindev>
+                        <type>singleton</type>
+                        <class>thebod_admindev/observer</class>
+                        <method>adminhtmlBlockHtmlBefore</method>
+                    </thebod_admindev>
+                </observers>
+            </adminhtml_block_html_before>
+        </events>
+    </adminhtml>
+</config>
